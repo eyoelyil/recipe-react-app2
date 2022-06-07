@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Create = () => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
-  const [genre, setGenre] = useState("");
+  const [rating, setRating] = useState("");
   const [content, setContent] = useState("");
   const [isPending, setIsPending] = useState(false);
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ const Create = () => {
     const recipe = {
       title,
       author,
-      genre,
+      rating,
       content,
     };
 
@@ -51,13 +51,13 @@ const Create = () => {
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
-        <label>Genre</label>
+        <label>Rating</label>
         <input
           type="text"
-          name="genre"
+          name="rating"
           required
-          value={genre}
-          onChange={(e) => setGenre(e.target.value)}
+          value={rating}
+          onChange={(e) => setRating(e.target.value)}
         />
         <label>Description</label>
         <textarea

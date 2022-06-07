@@ -4,9 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <h1>
-        <FontAwesomeIcon icon="fa-solid fa-plate-utensils" />
-      </h1>
+      <h1>Logo</h1>
       <div className="links">
         <Link to="/">Home</Link>
         <Link to="/recipes">Recipes</Link>

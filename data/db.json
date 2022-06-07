@@ -1,46 +1,53 @@
 {
   "recipes": [
     {
-      "title": "The Alchemist",
-      "author": "Paulo Coelho",
-      "content": "The Alchemist is a story of an Andalusian shepherd",
-      "genre": "Fiction",
+      "title": "GARLIC SHRIMP ZOODLES",
+      "author": "Master Chef ",
+      "content": "Another low-carb zoodle recipe, this time with sweet and tasty garlic roasted shrimp. Lemon adds a bit of tanginess and freshness to the zucchini noodles.",
+      "rating": "four star",
       "id": "1"
     },
     {
-      "title": "The Great Gatsby",
-      "author": "F. Scott Fitzgerald",
-      "content": "The Great Gatsby is a novel by F. Scott Fitzgerald",
-      "genre": "Fiction",
+      "title": "PARMESAN CRUSTED CHICKEN",
+      "author": "THE CHEF",
+      "content": "This is a simple recipe for a parmesan crusted chicken. It's a great way to make a quick meal for your family.",
+      "rating": "four star",
       "id": "2"
     },
     {
-      "title": "The Hobbit",
-      "author": "J. R. R. Tolkien",
-      "content": "The Hobbit is a novel by J. R. R. Tolkien",
-      "genre": "Fiction",
+      "title": "CHICKEN POTATOES",
+      "author": "THE CHEF",
+      "content": "Well, this quick emergency fish recipe is perfect with any fish fillet you have. It’s a super-healthy fish recipe ready in no time with a delicious golden baked crust.",
+      "rating": "four star",
       "id": "3"
     },
     {
-      "title": "The Lord of the Rings",
-      "author": "J. R. R. Tolkien",
-      "content": "The Lord of the Rings is a novel by J. R. R. Tolkien",
-      "genre": "Fiction",
+      "title": "FARMER'S MARKET SPICY TUNA WRAPS",
+      "author": "THE CHEF",
+      "content": "These tuna wraps are just delicious. Full of fresh veggies and drizzled with light chipotle Greek yogurt ranch dressing.",
+      "rating": "four star",
       "id": "4"
     },
     {
-      "title": "The Catcher in the Rye",
-      "author": "J. D. Salinger",
-      "content": "The Catcher in the Rye is a novel by J. D. Salinger",
-      "genre": "Fiction",
+      "title": "HONEY GARLIC SALMON",
+      "author": "THE CHEF",
+      "content": "I have for you some incredibly good-for-you yet yummy recipes that everyone in your family will love. All these dinner recipes are easy to prepare and are made with whole ingredients. They are filling and nutritious, perfect as your last meal of the day.",
+      "rating": "four star",
       "id": "5"
     },
     {
-      "title": "asdfasfd",
-      "author": "adfaf",
-      "genre": "afasf",
-      "content": "afafdff",
-      "id": "BbeEDx5"
+      "title": "HONEY GARLIC SALMON",
+      "author": "THE CHEF",
+      "content": "I have for you some incredibly good-for-you yet yummy recipes that everyone in your family will love. All these dinner recipes are easy to prepare and are made with whole ingredients. They are filling and nutritious, perfect as your last meal of the day.",
+      "rating": "four star",
+      "id": "5"
+    },
+    {
+      "title": "HONEY GARLIC SALMON",
+      "author": "THE CHEF",
+      "content": "I have for you some incredibly good-for-you yet yummy recipes that everyone in your family will love. All these dinner recipes are easy to prepare and are made with whole ingredients. They are filling and nutritious, perfect as your last meal of the day.",
+      "rating": "four star",
+      "id": "5"
     }
   ]
 }

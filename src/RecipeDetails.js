@@ -29,7 +29,7 @@ const RecipeDetails = () => {
           <h2>{recipe.title}</h2>
           <p>Written by {recipe.author}</p>
           <div>Content: {recipe.content}</div>
-          <div>Genre: {recipe.genre}</div>
+          <div>Rating: {recipe.rating}</div>
           <button onClick={handleClick}>Delete</button>
         </article>
       )}

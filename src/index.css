@@ -13,10 +13,12 @@
   align-items: center;
   max-width: 100%;
   margin: 0 auto;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #f1356d;
+  background: #f1356d;
+  color: #fff;
 }
 .navbar h1 {
-  color: #f1356d;
+  color: white;
 }
 .navbar .links {
   margin-left: auto;
@@ -27,7 +29,7 @@
   padding: 6px;
 }
 .navbar a:hover {
-  color: #f1356d;
+  color: white;
 }
 
 /* Header */
@@ -54,7 +56,7 @@
 }
 
 /* recipes preview list */
-.recipe-preview {
+/* .recipe-preview {
   padding: 10px 16px;
   margin: 20px 0;
   border-bottom: 1px solid #fafafa;
@@ -69,7 +71,7 @@
 }
 .recipe-preview a {
   text-decoration: none;
-}
+} */
 
 /* recipe details page */
 .recipe-details h2 {
@@ -125,4 +127,19 @@
   border-radius: 8px;
   font-size: 20px;
   cursor: pointer;
+}
+
+/* video */
+.home {
+  position: fixed; /*From absolute*/
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
