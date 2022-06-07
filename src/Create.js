@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Create = () => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
+  const [image, setImage] = useState("");
   const [rating, setRating] = useState("");
+  const [countries, setCountries] = useState([]);
+  const [flag, setFlag] = useState("");
   const [content, setContent] = useState("");
   const [isPending, setIsPending] = useState(false);
   const navigate = useNavigate();
@@ -14,7 +18,9 @@ const Create = () => {
     const recipe = {
       title,
       author,
+      image,
       rating,
+      flag,
       content,
     };
 
@@ -29,6 +35,23 @@ const Create = () => {
       setIsPending(false);
       navigate("/recipes");
     });
+  };
+
+  useEffect(() => {
+    axios
+      .get("https://restcountries.com/v3.1/all")
+      .then(function (response) {
+        setCountries(response.data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  const handleFlag = (e) => {
+    let selectedFlag = countries.filter(
+      (country) => country.name.common === e.target.value
+    )[0].flags.png;
+    setFlag(selectedFlag);
+    console.log(selectedFlag);
   };
 
   return (
@@ -50,6 +73,33 @@ const Create = () => {
           required
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
+        />
+        <label>Country</label>
+        <select name="country" id="country" onChange={handleFlag}>
+          <option value="">Select country</option>
+          {countries
+            .map((country) => (
+              <option key={country.name.common} value={country.name.common}>
+                {country.name.common}
+              </option>
+            ))
+            .sort(function (a, b) {
+              if (a > b) {
+                return 1;
+              }
+              if (a < b) {
+                return -1;
+              }
+              return 0;
+            })}
+        </select>
+        <label>Image URL</label>
+        <input
+          type="text"
+          name="image"
+          required
+          value={image}
+          onChange={(e) => setImage(e.target.value)}
         />
         <label>Rating</label>
         <input

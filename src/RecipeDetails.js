@@ -25,16 +25,50 @@ const RecipeDetails = () => {
       {isPending && <div>Loading...</div>}
       {error && <div>{error}</div>}
       {recipe && (
-        <article>
-          <h2>{recipe.title}</h2>
-          <p>Written by {recipe.author}</p>
-          <div>Content: {recipe.content}</div>
-          <div>Rating: {recipe.rating}</div>
-          <button onClick={handleClick}>Delete</button>
-        </article>
+        <div style={styles.recipeDiv}>
+          <div style={styles.imageDiv}>
+            <img src={recipe.flag} alt="" style={styles.flag} />
+            <img src={recipe.image} alt="" style={styles.image} />
+          </div>
+          <div>
+            <h2>{recipe.title}</h2>
+            <h4>Author {recipe.author}</h4>
+            <p>Content: {recipe.content}</p>
+            <p>Rating: {recipe.rating}</p>
+            <br />
+            <button onClick={handleClick}>Delete</button>
+          </div>
+        </div>
       )}
     </div>
   );
 };
 
 export default RecipeDetails;
+
+const styles = {
+  recipeDiv: {
+    // display: "flex",
+    // flexDirection: "row",
+    // justifyContent: "space-between",
+    // alignItems: "center",
+    margin: "20px",
+  },
+  imageDiv: {
+    marginRight: "20px",
+    width: "50px",
+  },
+  image: {
+    position: "relative",
+    width: "20rem",
+    height: "20rem",
+    borderRadius: "20px",
+  },
+  flag: {
+    position: "absolute",
+    width: "4rem",
+    height: "4rem",
+    borderRadius: "50%",
+    zIndex: "1",
+  },
+};

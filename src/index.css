@@ -49,11 +49,11 @@
   padding: 20px;
 }
 
-.content {
+/* .content {
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
-}
+} */
 
 /* recipes preview list */
 /* .recipe-preview {
@@ -79,8 +79,8 @@
   color: #f1356d;
   margin-bottom: 10px;
 }
-.recipe-details div {
-  margin-bottom: 20px 0;
+.recipe-details {
+  margin-top: 20px;
 }
 .recipe-details button {
   background: #f1356d;
@@ -109,7 +109,8 @@
   margin-bottom: 30px;
 }
 .create input,
-.create textarea {
+.create textarea,
+.create select {
   width: 100%;
   padding: 6px 10px;
   margin-bottom: 20px;
@@ -142,4 +143,18 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cardLink {
+  text-decoration: none;
 }

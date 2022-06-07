@@ -4,50 +4,70 @@
       "title": "GARLIC SHRIMP ZOODLES",
       "author": "Master Chef ",
       "content": "Another low-carb zoodle recipe, this time with sweet and tasty garlic roasted shrimp. Lemon adds a bit of tanginess and freshness to the zucchini noodles.",
-      "rating": "four star",
-      "id": "1"
+      "rating": "4.5",
+      "flag": "https://flagcdn.com/w320/us.png",
+      "id": "1",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2980&q=80"
     },
     {
       "title": "PARMESAN CRUSTED CHICKEN",
       "author": "THE CHEF",
       "content": "This is a simple recipe for a parmesan crusted chicken. It's a great way to make a quick meal for your family.",
-      "rating": "four star",
-      "id": "2"
+      "rating": "4.5",
+      "flag": "https://flagcdn.com/w320/er.png",
+      "id": "2",
+      "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
     },
     {
       "title": "CHICKEN POTATOES",
       "author": "THE CHEF",
       "content": "Well, this quick emergency fish recipe is perfect with any fish fillet you have. It’s a super-healthy fish recipe ready in no time with a delicious golden baked crust.",
-      "rating": "four star",
-      "id": "3"
+      "rating": "4.5",
+      "flag": "https://flagcdn.com/w320/er.png",
+      "id": "3",
+      "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80"
     },
     {
       "title": "FARMER'S MARKET SPICY TUNA WRAPS",
       "author": "THE CHEF",
       "content": "These tuna wraps are just delicious. Full of fresh veggies and drizzled with light chipotle Greek yogurt ranch dressing.",
-      "rating": "four star",
-      "id": "4"
+      "rating": "4.5",
+      "id": "4",
+      "image": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
     },
     {
       "title": "HONEY GARLIC SALMON",
       "author": "THE CHEF",
       "content": "I have for you some incredibly good-for-you yet yummy recipes that everyone in your family will love. All these dinner recipes are easy to prepare and are made with whole ingredients. They are filling and nutritious, perfect as your last meal of the day.",
-      "rating": "four star",
-      "id": "5"
+      "rating": "4.5",
+      "id": "6",
+      "image": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
     },
     {
       "title": "HONEY GARLIC SALMON",
       "author": "THE CHEF",
       "content": "I have for you some incredibly good-for-you yet yummy recipes that everyone in your family will love. All these dinner recipes are easy to prepare and are made with whole ingredients. They are filling and nutritious, perfect as your last meal of the day.",
-      "rating": "four star",
-      "id": "5"
+      "rating": "4.5",
+      "id": "7",
+      "image": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
     },
     {
-      "title": "HONEY GARLIC SALMON",
-      "author": "THE CHEF",
-      "content": "I have for you some incredibly good-for-you yet yummy recipes that everyone in your family will love. All these dinner recipes are easy to prepare and are made with whole ingredients. They are filling and nutritious, perfect as your last meal of the day.",
-      "rating": "four star",
-      "id": "5"
+      "title": "Doro",
+      "author": "Eyoel",
+      "image": "https://media-cdn.tripadvisor.com/media/photo-s/13/aa/59/10/doro-wot-is-the-main.jpg",
+      "rating": "5",
+      "flag": "https://flagcdn.com/w320/et.png",
+      "content": "I love doro be injera",
+      "id": "VN-xnST"
+    },
+    {
+      "title": "Another Doro",
+      "author": "Mesfin",
+      "image": "https://i.ytimg.com/vi/irlLDqqN3Vs/maxresdefault.jpg",
+      "rating": "5",
+      "flag": "https://flagcdn.com/w320/er.png",
+      "content": "Mesfin's doro",
+      "id": "sqsCHPn"
     }
   ]
 }
