@@ -163,3 +163,31 @@
 .cardLink {
   text-decoration: none;
 }
+
+/* home page buttons */
+.homebutton {
+  border: 1px solid #f1356d;
+  padding: 10px;
+
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 200px;
+  width: 20%;
+  z-index: 10000;
+}
+
+.hometext {
+  font-size: 30px;
+  margin-top: 200px;
+}
+
+.hometext h3 {
+  font-size: 40px;
+  color: #fff;
+}
+
+.homebutton p {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+}
