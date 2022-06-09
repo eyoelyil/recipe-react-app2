@@ -1,6 +1,6 @@
 # React Recipe App
 
-## ![Demo](https://react-recipe-app-d1a39.web.app/)
+## [Demo](https://react-recipe-app-d1a39.web.app/)
 
 ## About This Project
 
