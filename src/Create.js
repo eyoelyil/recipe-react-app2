@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+import firebase from "./firebase";
 
 const Create = () => {
   const [title, setTitle] = useState("");
@@ -13,9 +15,43 @@ const Create = () => {
   const [isPending, setIsPending] = useState(false);
   const navigate = useNavigate();
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const recipe = {
+  //     title,
+  //     author,
+  //     image,
+  //     rating,
+  //     flag,
+  //     content,
+  //   };
+
+  //   setIsPending(true);
+
+  //   fetch("http://localhost:8006/recipes", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(recipe),
+  //   }).then(() => {
+  //     console.log("recipe created");
+  //     setIsPending(false);
+  //     navigate("/recipes");
+  //   });
+  // };
+  const ref = firebase.firestore().collection("recipes");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsPending(true);
+    // = collection(firestore, 'posts')
+
+    // if(!post.author || !post.title){
+    //   setMessage('All fields are requiered')
+    //   setTimeout(() => setMessage(''), 3000)
+    //   return
+    // }
     const recipe = {
+      id: uuidv4(),
       title,
       author,
       image,
@@ -24,17 +60,19 @@ const Create = () => {
       content,
     };
 
-    setIsPending(true);
-
-    fetch("http://localhost:8006/recipes", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(recipe),
-    }).then(() => {
-      console.log("recipe created");
-      setIsPending(false);
-      navigate("/recipes");
-    });
+    ref
+      .doc(recipe.id)
+      .set(recipe)
+      .then(() => {
+        console.log("recipe created");
+        setIsPending(false);
+        navigate("/recipes");
+      })
+      .catch((err) => {
+        console.log("error adding ", err);
+      });
+    //  setAuthor('')
+    //  setTitle('')
   };
 
   useEffect(() => {

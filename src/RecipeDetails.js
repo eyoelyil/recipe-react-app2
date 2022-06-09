@@ -1,23 +1,56 @@
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import useFetch from "./useFetch";
+import firebase from "./firebase.js";
 
 const RecipeDetails = () => {
+  const [recipe, setRecipe] = useState(null);
+  const [isPending, setIsPending] = useState(false);
+  const [error, setError] = useState(null);
   const { id } = useParams();
   const navigate = useNavigate();
-  const {
-    data: recipe,
-    error,
-    isPending,
-  } = useFetch("http://localhost:8006/recipes/" + id);
+  // const {
+  //   data: recipe,
+  //   error,
+  //   isPending,
+  // } = useFetch("http://localhost:8006/recipes/" + id);
+  const ref = firebase.firestore().collection("recipes");
+
+  const fetchRecipe = (id) => {
+    ref.onSnapshot((querySnapshot) => {
+      const items = [];
+      querySnapshot.forEach((doc) => {
+        items.push(doc.data());
+      });
+      const recip = items.find((item) => item.id === id);
+      setRecipe(recip);
+      console.log(items[id], "items");
+    });
+  };
+
+  useEffect(() => {
+    fetchRecipe(id);
+  }, []);
 
   const handleClick = () => {
-    fetch("http://localhost:8006/recipes/" + id, {
-      method: "DELETE",
-    }).then(() => {
-      console.log("recipe deleted");
-      navigate("/recipes");
-    });
+    // fetch("http://localhost:8006/recipes/" + id, {
+    //   method: "DELETE",
+    // }).then(() => {
+    //   console.log("recipe deleted");
+    //   navigate("/recipes");
+    // });
+
+    ref
+      .doc(id)
+      .delete()
+      .then(() => {
+        console.log("recipe deleted");
+        navigate("/recipes");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (

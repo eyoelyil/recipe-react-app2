@@ -17,10 +17,15 @@
   background: #f1356d;
   color: #fff;
 }
-.navbar h1 {
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 20px;
   color: white;
 }
-.navbar .links {
+
+.links {
+  color: white;
   margin-left: auto;
 }
 .navbar a {

@@ -1,9 +1,37 @@
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useFetch from "./useFetch";
 import styled from "styled-components";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/splide/dist/css/splide.min.css";
+import firebase from "./firebase.js";
 
 const RecipeList = () => {
-  const { data, isPending, error } = useFetch("http://localhost:8006/recipes");
+  // const { data, isPending, error } = useFetch("http://localhost:8006/recipes");
+
+  const [recipes, setRecipes] = useState([]);
+  const [isPending, setIsPending] = useState(false);
+  const [error, setError] = useState(null);
+
+  const ref = firebase.firestore().collection("recipes");
+
+  const getRecipes = () => {
+    setIsPending(true);
+    ref.onSnapshot((querySnapshot) => {
+      const items = [];
+      querySnapshot.forEach((doc) => {
+        items.push(doc.data());
+      });
+      setRecipes(items);
+      console.log(items, "items");
+      setIsPending(false);
+    });
+  };
+
+  useEffect(() => {
+    getRecipes();
+    console.log(recipes, "recipes");
+  }, []);
 
   return (
     <div className="recipe-list">
@@ -14,8 +42,8 @@ const RecipeList = () => {
       {isPending && <div>Loading...</div>}
       {/* {data && <RecipeList recipes={data} title="All recipes" />} */}
       <div className="container">
-        {data &&
-          data.map((recipe) => (
+        {recipes &&
+          recipes.map((recipe) => (
             <Wrapper key={recipe.id}>
               {/* <div className="recipe-preview" key={recipe.id}> */}
               <Link to={`/recipes/${recipe.id}`} className="cardLink">
@@ -29,8 +57,8 @@ const RecipeList = () => {
                     margin: "0 auto",
                   }}
                 />
-                <p>{recipe.title}</p>
-                <p>{recipe.rating}</p>
+                <h4>{recipe.title}</h4>
+                <p>Rating {recipe.rating}</p>
               </Link>
               {/* </div> */}
             </Wrapper>
